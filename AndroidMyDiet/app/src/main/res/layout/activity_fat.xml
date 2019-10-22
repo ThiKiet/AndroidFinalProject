@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="400sp"
+        android:layout_width="380sp"
         android:layout_height="400sp"
         android:layout_marginTop="20sp"
         android:layout_gravity="center"
