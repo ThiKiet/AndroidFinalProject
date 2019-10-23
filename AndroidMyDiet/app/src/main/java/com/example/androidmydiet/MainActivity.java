@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if(editTextname.getText().toString().isEmpty()){
                     editTextname.setError("Không được để trống");
-                }else{
+                }
+                else if(edtHeight > 250 || edtHeight < 30){
+                    editTextHeight.setError("I don't belive, type again");
+                }
+                else{
                     intent.putExtra("name", name);
                     intent.putExtra("weight", weight);
                     intent.putExtra("height", edtHeight);
@@ -51,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         btndel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
                 System.exit(0);
             }
         });
